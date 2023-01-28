@@ -10,7 +10,7 @@ app = Flask(__name__)
 limiter = Limiter(
     app,
     key_func=get_remote_address,
-    default_limits=["20 per hour"],
+    default_limits=["100 per hour"],
     storage_uri="memory://",
 )
 
@@ -55,7 +55,10 @@ def home():
     return response if request.args.get("noredirect") == "yes" else redirect(response)
 
 
-
+# Rate limiting system.
+@app.errorhandler(429)
+def ratelimit_handler(e):
+    return f'{e}. To ensure everyone gets a correct access to the program, we are rate-limiting the server.'
 
 
 # change to your likings, params are "ip", "port", "threaded"
