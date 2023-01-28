@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 from flask import Flask, request, redirect
-from flask_limiter import Limiters
+from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import validators
 from api import get_streams
 
 app = Flask(__name__)
 
-limiter = Limiters(
+limiter = Limiter(
     app,
     key_func=get_remote_address,
-    default_limits=["100 per hour"],
+    default_limits=["20 per hour"],
     storage_uri="memory://",
 )
 
