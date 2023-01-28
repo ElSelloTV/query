@@ -11,11 +11,7 @@ Para contribuir en este proyecto, por favor haz una donación en su [página Ope
 ## Como iniciar este programa:
 
 - Localmente :
-```python main.py```
-
-- Servidor (repl / heroku etc...) :
-[@adrianpaniagualeon](https://github.com/adrianpaniagualeon) hizo un boton que permite una creación automática del programa directamente en Heroku, gracias a el.
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FLaneSh4d0w%2Fquery-streamlink)
+```python3 main.py```
 
 Para los otros servicios del mismo tipo, un fork del programa debe ser suficiente para hacerlo funcionar, sin embargo, verifica con el servidor las configuraciones específicas.
 
